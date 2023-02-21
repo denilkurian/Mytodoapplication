@@ -1,0 +1,41 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>tasklist</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+</head>
+<body class="list">
+<center><h1 style="color:green;">My Todo lists</h1>
+
+<table><center>
+    <tr>
+        <th>Tasks</th>
+        <th>Description</th>
+        <th>Time</th>
+    </tr>
+    {% for tasks in task %}
+    <tr>
+
+        <td style="font-family:Franklin Gothic Medium;">{{tasks.title}}</td>
+        <td style="font-family:Calibri Light;">{{tasks.description}}</td>
+        <td>{{tasks.created}}</td>
+
+         <td><a href="{% url 'task-update' tasks.id %}" class="z">Edit &#128221;</a> </td>
+         <td> <a href="{% url 'task-delete' tasks.id %}" class="y">Delete&#128465;</a> </td>
+        <td> <a href="{% url 'task-detail' tasks.id %}" class="z">Details&#128269;</a> </td>
+    </tr>
+    {% endfor %}
+    <div>
+ <a href="{% url 'task-create' %}" class="new">Create new Task</a></div>
+</center></table>
+</body>
+</html>
+
+
+
+
+
+
+

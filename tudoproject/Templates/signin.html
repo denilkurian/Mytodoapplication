@@ -1,0 +1,26 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<center><div class="signin">
+<h1>Log in to Todo</h1>
+<form action="" method="post">
+    {% csrf_token %}
+    <label for="username">Username</label>
+    <input type="text" id="username" name="username" placeholder="Enter your username" Required>
+    <br>
+     <label for="pass1">Password</label>
+    <input type="password" id="pass1" name="pass1" placeholder="enter your password" Required>
+    <br>
+  <button type="submit">Log in</button>
+
+</form>
+<br>
+</div></center>
+</body>
+</html>

@@ -1,0 +1,51 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+</head>
+<body>
+<h1 style="color:black">Signup for free</h1>
+<form action="" method="post">
+    {% csrf_token %}
+  <div class="container">
+    <label for="username" class="a">Username</label><br>
+    <input type="text" id="username" name="username" placeholder="create a username" Required>
+<br>
+    <label for="fname" class="a">Firstname</label><br>
+    <input type="text" id="fname" name="fname" placeholder="enter your firstname" Required>
+<br>
+    <label for="lname" class="a">Lastname</label><br>
+    <input type="text" id="lname" name="lname" placeholder="enter your lastname" Required>
+<br>
+    <label for="email" class="a">Email</label><br>
+    <input type="email" id="email" name="email" placeholder="enter your email_id" Required>
+<br>
+    <label for="pass1" class="a">Password</label><br>
+    <input type="password" id="pass1" name="pass1" placeholder="enter your password" Required>
+<br>
+    <label for="pass2" class="a">Confirm password</label><br>
+    <input type="password" id="pass2" name="pass2" placeholder="Reenter your password" Required>
+    <br>
+  <button type="submit" class="signup">Sign Up</button></div>
+</form>
+<br>
+<br>
+<br>
+<div>
+<center><h2>Already have an account</h2>
+<a href="/signin" class="bt">Sign in</a></center>
+</div>
+<div class="absolute">
+    <h2>Why Todo Lists</h2>
+<p>To-do lists offer a way to increase productivity, stopping you from forgetting things, helps prioritise tasks,
+    manage tasks effectively, use time wisely and improve time management as well as workflow.</p>
+</div>
+
+</body>
+</html>
+
+

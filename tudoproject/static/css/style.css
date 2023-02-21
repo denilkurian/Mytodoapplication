@@ -1,0 +1,185 @@
+
+#b {
+  color: green;
+  font-family: verdana;
+  font-size: 200%;
+}
+ #h {
+  color: blue;
+  font-family: italic;
+  font-size: 155%;
+}
+ .bt {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+input {
+  width: 50%;
+  padding: 10px;
+  margin: 4px  22px ;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+.a{
+  color: green;
+   font-size: 19px;
+   font-weight: bold;
+}
+
+.signup {
+  float: left;
+  width: 53%;
+  padding: 15px;
+   background-color: #04aa6d;
+   cursor: pointer;
+   opacity:1;
+}
+ .signin {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+}
+
+.absolute {
+  position: absolute;
+  top: 50px;
+  right: 50px;
+  width: 500px;
+  height: 200px;
+  border: 1px solid #73AD21;
+  background-color: lightgray;
+  padding-left: 15px;
+}
+
+
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 80%;
+}
+
+td,th {
+  border: 0px  solid #ffff00;
+  text-align: left;
+  padding: 18px;
+}
+
+tr:nth-child {
+  background-color: #dddddd;
+}
+
+.list {
+  background-color: lightgreen;
+}
+
+.z{
+     background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 15px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.z {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.z:hover {
+  background-color: #4CAF50;
+  color: white;
+}
+
+
+.y{
+     background-color: #FF0000; /* Green */
+  border: none;
+  color: white;
+  padding: 16px 9px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+.y {
+  background-color: white;
+  color: black;
+  border: 2px solid #4CAF50;
+}
+
+.y:hover {
+  background-color: #FF0000;
+  color: white;
+}
+
+
+.new {
+   background-color:#bf00ff;
+  border: none;
+  color: white;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+}
+
+.q {
+background-color: lightgrey;
+}
+
+
+ .anm {
+  position: absolute;
+  top: 360px;
+  left: 270px;
+  opacity:.7;
+}
+
+
+ .anm1 {
+  position: absolute;
+  top: 360px;
+  left:770px;
+  opacity:.7;
+}
+
+
+
+
+
+
+
+
+
+
+
