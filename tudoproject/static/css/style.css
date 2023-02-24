@@ -68,86 +68,15 @@ input {
   padding-left: 15px;
 }
 
-
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 80%;
-}
-
-td,th {
-  border: 0px  solid #ffff00;
-  text-align: left;
-  padding: 18px;
-}
-
-tr:nth-child {
-  background-color: #dddddd;
-}
-
-.list {
-  background-color: lightgreen;
-}
-
-.z{
-     background-color: #4CAF50; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 15px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.z {
-  background-color: white;
-  color: black;
-  border: 2px solid #4CAF50;
-}
-
-.z:hover {
-  background-color: #4CAF50;
-  color: white;
-}
-
-
-.y{
-     background-color: #FF0000; /* Green */
-  border: none;
-  color: white;
-  padding: 16px 9px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 16px;
-  margin: 4px 2px;
-  transition-duration: 0.4s;
-  cursor: pointer;
-}
-.y {
-  background-color: white;
-  color: black;
-  border: 2px solid #4CAF50;
-}
-
-.y:hover {
-  background-color: #FF0000;
-  color: white;
-}
-
-
-.new {
+.addtask {
    background-color:#bf00ff;
   border: none;
   color: white;
-  padding: 16px 32px;
+  padding: 10px 15px;
   text-align: center;
   text-decoration: none;
   display: inline-block;
-  font-size: 16px;
+  font-size: 15px;
   margin: 4px 2px;
   transition-duration: 0.4s;
   cursor: pointer;
@@ -157,14 +86,12 @@ tr:nth-child {
 background-color: lightgrey;
 }
 
-
  .anm {
   position: absolute;
   top: 360px;
   left: 270px;
   opacity:.7;
 }
-
 
  .anm1 {
   position: absolute;
@@ -173,13 +100,168 @@ background-color: lightgrey;
   opacity:.7;
 }
 
+ .edit {
+    background-color: #4CAF50;
+ border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+    border-radius: 45%;
+
+}
+
+ .delete {
+    background-color: red;
+ border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+    border-radius: 45%;
+
+}
+
+ .details {
+    background-color: blue;
+ border: none;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  margin: 4px 2px;
+  cursor: pointer;
+    border-radius: 45%;
+
+}
+
+
+ .taskdel {
+  border: 0px solid black;
+  margin-top: 200px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 150px;
+  background-color: lightgreen;
+
+}
+
+.submit {
+cursor: pointer;
+}
+.submit:hover {
+  background-color: red;
+  color: white;
+}
+
+.submit2 {
+cursor: pointer;
+}
+.submit2:hover {
+  background-color: green;
+  color: white;
+}
+
+
+.signout {
+background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  cursor: pointer;
+  }
+
+.create {
+ border: 0px solid black;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  margin-right: 150px;
+  margin-left: 150px;
+  background-color: lightgreen;
+
+
+}
+
+  .description {
+ background-color: lightgreen;
+  width: 1000px;
+  border: 0px violet;
+  padding: 50px;
+  margin: 50px;
+
+}
 
 
 
 
+.home {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+   display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  position: absolute;
+  top: 5%;
+  left: 15%;
+  transform: translate(-50%, -50%);
+}
+.home:hover {
+  background-color: lightgreen;
+}
+
+.about {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+   display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+  transform: translate(-50%, -50%);
+}
+.about:hover {
+  background-color: lightgreen;
+}
 
 
 
 
-
-
+.signout {
+  background-color: #ddd;
+  border: none;
+  color: black;
+  padding: 10px 20px;
+   display: inline-block;
+  margin: 4px 2px;
+  cursor: pointer;
+  border-radius: 16px;
+  position: absolute;
+  top: 5%;
+  left: 5%;
+  transform: translate(-50%, -50%);
+}
+.signout:hover {
+  background-color: lightgreen;
+}

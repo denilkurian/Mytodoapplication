@@ -1,18 +1,18 @@
-
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>Task_Detail</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 </head>
-<body>
+<body style="background-color:lightblue">
 
 
-<center><h1 style="color:blue;">About this task</h1>
-
-    <p>{{ task.description }}</p></center>
-
-
+<center><h1 style="font-family:Bahnschrift">About this task</h1>
+<div class="description">
+    <p>{{ task.description }}</p></div>
+    <h4 style="color:purple"><u>This task has been created on {{task.created}}</u> </h4></center>
 
 </body>
 </html>

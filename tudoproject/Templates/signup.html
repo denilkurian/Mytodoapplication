@@ -1,4 +1,3 @@
-
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -7,7 +6,7 @@
     <title>Title</title>
      <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
 </head>
-<body>
+<body style="background-color:lightgrey">
 <h1 style="color:black">Signup for free</h1>
 <form action="" method="post">
     {% csrf_token %}
@@ -41,7 +40,7 @@
 </div>
 <div class="absolute">
     <h2>Why Todo Lists</h2>
-<p>To-do lists offer a way to increase productivity, stopping you from forgetting things, helps prioritise tasks,
+<p style="font-family:italic"> To-do lists offer a way to increase productivity, stopping you from forgetting things, helps prioritise tasks,
     manage tasks effectively, use time wisely and improve time management as well as workflow.</p>
 </div>
 
