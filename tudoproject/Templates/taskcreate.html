@@ -5,18 +5,25 @@
     <meta charset="UTF-8">
     <title>task_create</title>
         <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 <body style="background-color:lightblue">
+{% if user.is_authenticated %}
 <center>
 <div class="create">
-<h1>Add your task here</h1>
+<h1 style="font-family:gabriola">Add your task here</h1>
 
 <form method="post" action="">
   {% csrf_token %}
   {{form.as_p}}
-  <input type="submit" value="submit" class="submit2"/>
+  <input type="submit" value="submit" class="btn btn-info"/>
 
-</form><div></center>
+
+</form><div><br>
+    <center><a href="/task-list"><button class="btn btn-dark">Return</button></a></center>
+</center>
+{% endif %}
 </body>
 </html>
 

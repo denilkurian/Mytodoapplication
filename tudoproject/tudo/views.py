@@ -1,3 +1,5 @@
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.contrib.messages.views import SuccessMessageMixin
 from django.shortcuts import render,redirect
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
@@ -6,40 +8,50 @@ from django.contrib.auth import authenticate,login
 from django.http import HttpResponse
 from django.views.generic import ListView,CreateView,UpdateView,DeleteView,DetailView
 from .models import Tasks
-# Create your views here.
 
 
-class TaskList(ListView):
+
+
+class TaskList(LoginRequiredMixin,ListView):
     model= Tasks
     context_object_name='task'
     template_name='TaskList.html'
 
-class TaskCreate(CreateView):
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['task'] = context['task'].filter(user=self.request.user)
+        return context
+
+
+class TaskCreate(LoginRequiredMixin,CreateView):
     model = Tasks
-    fields='__all__'
+    fields=['title','description','complete',]
+    success_url=reverse_lazy('task')
+    template_name='taskcreate.html'
+
+    def form_valid(self, form):
+        form.instance.user=self.request.user
+        return super(TaskCreate,self).form_valid(form)
+
+
+class TaskUpdate(LoginRequiredMixin,UpdateView):
+    model = Tasks
+    fields=['title','description','complete',]
     success_url=reverse_lazy('task')
     template_name='taskcreate.html'
 
 
-class TaskUpdate(UpdateView):
-    model = Tasks
-    fields='__all__'
-    success_url=reverse_lazy('task')
-    template_name='taskcreate.html'
-
-
-class TaskDelete(DeleteView):
+class TaskDelete(SuccessMessageMixin, LoginRequiredMixin,DeleteView):
     model = Tasks
     context_object_name = 'task'
     success_url = reverse_lazy('task')
     template_name = 'taskdelete.html'
+    success_message = 'Deleted succesfully'
 
-class TaskDetail(DetailView):
+class TaskDetail(LoginRequiredMixin,DetailView):
     model = Tasks
     context_object_name = 'task'
     template_name = 'taskdetail.html'
-
-
 
 
 
@@ -74,6 +86,7 @@ def signin(request):
         username = request.POST.get('username')
         pass1 = request.POST.get('pass1')
         user = authenticate(request, username=username, password=pass1)
+        messages.success(request, ' Logged in successfully.')
         if user is not None:
             login(request, user)
             return redirect('task')
@@ -82,8 +95,14 @@ def signin(request):
     return render(request, 'signin.html')
 
 
-def signout(request):
-    pass
+def details(request):
+    return render(request,'details.html')
+
+
+
+
+
+
 
 
 

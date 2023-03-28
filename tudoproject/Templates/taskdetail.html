@@ -5,15 +5,18 @@
     <meta charset="UTF-8">
     <title>Task_Detail</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+            <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
 </head>
 <body style="background-color:lightblue">
 
-
-<center><h1 style="font-family:Bahnschrift">About this task</h1>
+<br>
+<center><h1 style="font-family:gabriola">About this task</h1>
 <div class="description">
     <p>{{ task.description }}</p></div>
-    <h4 style="color:purple"><u>This task has been created on {{task.created}}</u> </h4></center>
+    <p style="color:purple"><u>This task has been created on {{task.created}}</u> </p></center>
 
+<center><a href="/task-list"><button class="btn btn-dark">Return</button></a></center>
 </body>
 </html>
 

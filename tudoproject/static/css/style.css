@@ -4,7 +4,7 @@
   font-family: verdana;
   font-size: 200%;
 }
- #h {
+ #h{
   color: blue;
   font-family: italic;
   font-size: 155%;
@@ -115,8 +115,9 @@ background-color: lightgrey;
 
 }
 
+
  .delete {
-    background-color: red;
+background-color: red;
  border: none;
   color: white;
   padding: 10px;
@@ -147,13 +148,15 @@ background-color: lightgrey;
 
 
  .taskdel {
-  border: 0px solid black;
-  margin-top: 200px;
+ border: 2px solid black;
+  margin-top: 100px;
   margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 150px;
-  background-color: lightgreen;
+  margin-right: 500px;
+  margin-left: 500px;
 
+  background-color: white;
+  padding:10px 0px;
+  border-radius:2%;
 }
 
 .submit {
@@ -163,6 +166,17 @@ cursor: pointer;
   background-color: red;
   color: white;
 }
+
+.submitcancel {
+cursor: pointer;
+}
+.submitcancel:hover {
+  background-color: green;
+  color: white;
+}
+
+
+
 
 .submit2 {
 cursor: pointer;
@@ -187,22 +201,32 @@ background-color: #4CAF50;
   }
 
 .create {
- border: 0px solid black;
-  margin-top: 100px;
+
+  border: 2px solid black;
+  margin-top: 50px;
   margin-bottom: 100px;
-  margin-right: 150px;
-  margin-left: 150px;
-  background-color: lightgreen;
+  margin-right: 500px;
+  margin-left: 500px;
+
+  background-color: white;
+  padding:10px 0px;
+  border-radius:4%;
 
 
 }
 
+
+
   .description {
- background-color: lightgreen;
-  width: 1000px;
-  border: 0px violet;
-  padding: 50px;
-  margin: 50px;
+ border: 0px solid black;
+  margin-top: 30px;
+  margin-bottom: 100px;
+  margin-right: 500px;
+  margin-left: 500px;
+
+  background-color: white;
+  padding:10px 0px;
+  border-radius:2%;
 
 }
 
@@ -224,7 +248,7 @@ background-color: #4CAF50;
   transform: translate(-50%, -50%);
 }
 .home:hover {
-  background-color: lightgreen;
+  background-color: lightblue;
 }
 
 .about {
@@ -242,7 +266,7 @@ background-color: #4CAF50;
   transform: translate(-50%, -50%);
 }
 .about:hover {
-  background-color: lightgreen;
+  background-color: lightblue;
 }
 
 
@@ -263,5 +287,53 @@ background-color: #4CAF50;
   transform: translate(-50%, -50%);
 }
 .signout:hover {
-  background-color: lightgreen;
+  background-color: lightblue;
+}
+
+.user {
+font-size:20px;
+   color:blue;
+   font-family:Gabriola;
+   position: absolute;
+  top: 5%;
+  left: 93%;
+  transform: translate(-50%, -50%);
+}
+
+.dark-mode-btn {
+color:white;
+background-color:black;
+  font-size: 12px;
+   position: absolute;
+  top: 4.5%;
+  right: 1%;
+  transform: translate(-50%, -50%);
+  padding: 8px 8px;
+  border: none;
+  cursor: pointer;
+  border-radius: 50px;
+
+
+}
+
+.dark-mode-btn:hover{
+background-color:#4c5259;
+}
+
+
+.dark-mode {
+  background-color: black;
+  color: white;
+}
+
+
+.user-head {
+color:blue;
+font-family:gabriola;
+
+}
+
+
+ .th,td{
+  padding: 10px;
 }

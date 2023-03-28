@@ -5,24 +5,36 @@
     <meta charset="UTF-8">
     <title>tasklist</title>
     <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
-<body style="background-color: lightblue">
+
+<body>
+{% if user.is_authenticated %}
+
 <div>
-<button class="home"> <a href="details/">About</a></button>
-     <button class="about"><a href="/signin">Signout</a></button>
-     <button class="signout">Home</button></div>
+    <a href="details/"><button title="About" class="home">About</button></a>
+     <a href="/signin"><button title="Signout" class="about">Signout</button></a>
+     <button title="Homepage" class="signout">Home</button></div>
 
     <tr>
         <br>
         <br>
         <br>
 <center>
-      <h2>Tasks</h2>
- <a href="{% url 'task-create' %}" class="addtask">Create new Task</a></center>
+
+
+    <h3 class="user"> <i title="Account" style="color:blue" class="bi bi-person-circle"></i> {{ request.user }} </h3>
+     {% include 'login-messege.html' %}
+      <h2>Tasks</h2><hr>
+ <a href="{% url 'task-create' %}"><p title="Add a new task" class="btn btn-primary">Create new Task</p></a></center>
         <br>
-        <br>
+
         <div>
-<center><table class="box">
+<center><table style="width:22%" class="box">
 
 
     </tr>
@@ -33,15 +45,29 @@
         {% else %}
         <td style="font-family:Leelawadee UI">{{tasks.title}}</td>
         {% endif %}
-         <td><a href="{% url 'task-update' tasks.id %}" class="edit">Edit &#128221;</a> </td>
-         <td> <a href="{% url 'task-delete' tasks.id %}" class="delete">Delete&#128465;</a> </td>
-        <td> <a href="{% url 'task-detail' tasks.id %}" class="details">Details&#128269;</a> </td>
+         <td><a title="Edit"  href="{% url 'task-update' tasks.id %}"><i class="bi bi-pencil-square" style="color:green"></i></a></td>
+         <td> <a title="Delete" href="{% url 'task-delete' tasks.id %}"><i class="bi bi-trash3-fill" style="color:red"></i></a></td>
+        <td> <a title="View" href="{% url 'task-detail' tasks.id %}"><i class="bi bi-clipboard-minus"></i></a></td>
+
     </tr>
+    {% empty %}
+    <h1 class="user-head"> Hii {{user}}, Add Your first task here....</h1>
+
     {% endfor %}
 
 </table></center></div>
 
 
+ <button title="Dark Mode"  class="dark-mode-btn" onclick="myFunction()"><i class="bi bi-brightness-alt-high-fill"></i></button>
+<script>
+function myFunction() {
+   var element = document.body;
+   element.classList.toggle("dark-mode");
+}
+
+</script>
+
+{% endif %}
 </body>
 </html>
 

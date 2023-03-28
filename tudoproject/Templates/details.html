@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>About Todo app</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}"/>
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+</head>
+<body style="background-color:lightblue">
+{% if user.is_authenticated %}
+<h2>Hii all we hope you enjoy this application</h2>
+<div>
+<p><strong>Why todo</strong><br>To-do lists offer a way to increase productivity, stopping you from forgetting things, helps prioritise tasks,<br>
+    manage tasks effectively, use time wisely and improve time management as well as workflow.</p>
+
+<p><strong><u>About this application</u></strong><br>In our application we provide user friendly functions in order to create tasks and stored it in your memory<br>
+You can add new tasks by clicking Create new task button and the completed tasks will be displayed as <strike style="color:red">completed</strike><br>
+we provide some other functions like updaion,deletion and description of the created tasks.</p>
+
+<p>Your password and tasks are end-to-end encrypted&#128274;.</p></div>
+<a href="/task-list"><button class="btn btn-dark ">Return</button></a>
+
+{% endif %}
+</body>
+</html>
+
