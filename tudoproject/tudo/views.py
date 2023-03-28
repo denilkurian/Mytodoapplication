@@ -4,7 +4,7 @@ from django.shortcuts import render,redirect
 from django.urls import reverse_lazy
 from django.contrib.auth.models import User
 from django.contrib import messages
-from django.contrib.auth import authenticate,login
+from django.contrib.auth import authenticate, login, logout
 from django.http import HttpResponse
 from django.views.generic import ListView,CreateView,UpdateView,DeleteView,DetailView
 from .models import Tasks
@@ -93,6 +93,12 @@ def signin(request):
         else:
             return HttpResponse("username or password is incorrect!!!")
     return render(request, 'signin.html')
+
+
+def signout(request):
+    logout(request)
+    return redirect('signin')
+
 
 
 def details(request):
